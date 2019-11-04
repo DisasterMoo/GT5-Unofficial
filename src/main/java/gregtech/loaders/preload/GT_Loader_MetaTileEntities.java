@@ -210,16 +210,16 @@ public class GT_Loader_MetaTileEntities implements Runnable {//TODO CHECK CIRCUI
         ItemList.Hatch_Dynamo_UV.set(new GT_MetaTileEntity_Hatch_Dynamo(38, "hatch.dynamo.tier.08", "UV Dynamo Hatch", 8).getStackForm(1L));
         ItemList.Hatch_Dynamo_MAX.set(new GT_MetaTileEntity_Hatch_Dynamo(39, "hatch.dynamo.tier.09", "UHV Dynamo Hatch", 9).getStackForm(1L));
 
-        ItemList.Hatch_Dynamo_ULV.set(new GT_MetaTileEntity_Hatch_Dynamo(30, "hatch.dynamo.tier.00", "ULV Dynamo Hatch", 0).getStackForm(1L));
-        ItemList.Hatch_Dynamo_LV.set(new GT_MetaTileEntity_Hatch_Dynamo(31, "hatch.dynamo.tier.01", "LV Dynamo Hatch", 1).getStackForm(1L));
-        ItemList.Hatch_Dynamo_MV.set(new GT_MetaTileEntity_Hatch_Dynamo(32, "hatch.dynamo.tier.02", "MV Dynamo Hatch", 2).getStackForm(1L));
-        ItemList.Hatch_Dynamo_HV.set(new GT_MetaTileEntity_Hatch_Dynamo(33, "hatch.dynamo.tier.03", "HV Dynamo Hatch", 3).getStackForm(1L));
-        ItemList.Hatch_Dynamo_EV.set(new GT_MetaTileEntity_Hatch_Dynamo(34, "hatch.dynamo.tier.04", "EV Dynamo Hatch", 4).getStackForm(1L));
-        ItemList.Hatch_Dynamo_IV.set(new GT_MetaTileEntity_Hatch_Dynamo(35, "hatch.dynamo.tier.05", "IV Dynamo Hatch", 5).getStackForm(1L));
-        ItemList.Hatch_Dynamo_LuV.set(new GT_MetaTileEntity_Hatch_Dynamo(36, "hatch.dynamo.tier.06", "LuV Dynamo Hatch", 6).getStackForm(1L));
-        ItemList.Hatch_Dynamo_ZPM.set(new GT_MetaTileEntity_Hatch_Dynamo(37, "hatch.dynamo.tier.07", "ZPM Dynamo Hatch", 7).getStackForm(1L));
-        ItemList.Hatch_Dynamo_UV.set(new GT_MetaTileEntity_Hatch_Dynamo(38, "hatch.dynamo.tier.08", "UV Dynamo Hatch", 8).getStackForm(1L));
-        ItemList.Hatch_Dynamo_MAX.set(new GT_MetaTileEntity_Hatch_Dynamo(39, "hatch.dynamo.tier.09", "UHV Dynamo Hatch", 9).getStackForm(1L));
+        GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Dynamo_ULV.get(1), bitsd, new Object[]{" MC", 'M', ItemList.Hull_ULV, 'C', OrePrefixes.cableGt01.get(Materials.Lead)});
+        GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Dynamo_LV.get(1), bitsd, new Object[]{" MC", 'M', ItemList.Hull_LV, 'C', OrePrefixes.cableGt01.get(Materials.Tin)});
+        GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Dynamo_MV.get(1), bitsd, new Object[]{" MC", 'M', ItemList.Hull_MV, 'C', OrePrefixes.cableGt01.get(Materials.Copper)});
+        GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Dynamo_HV.get(1), bitsd, new Object[]{" MC", 'M', ItemList.Hull_HV, 'C', OrePrefixes.cableGt01.get(Materials.Gold)});
+        GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Dynamo_EV.get(1L), bitsd, new Object[]{" MC", 'M', ItemList.Hull_EV, 'C', OrePrefixes.cableGt01.get(Materials.Aluminium)});
+        GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Dynamo_IV.get(1L), bitsd, new Object[]{" MC", 'M', ItemList.Hull_IV, 'C', OrePrefixes.cableGt01.get(Materials.Tungsten)});
+        GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Dynamo_LuV.get(1L), bitsd, new Object[]{" MC", 'M', ItemList.Hull_LuV, 'C', OrePrefixes.cableGt01.get(Materials.VanadiumGallium)});
+        GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Dynamo_ZPM.get(1L), bitsd, new Object[]{" MC", 'M', ItemList.Hull_ZPM, 'C', OrePrefixes.cableGt02.get(Materials.Naquadah)});
+        GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Dynamo_UV.get(1L), bitsd, new Object[]{" MC", 'M', ItemList.Hull_UV, 'C', OrePrefixes.cableGt04.get(Materials.NaquadahAlloy)});
+        GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Dynamo_MAX.get(1L), bitsd, new Object[]{" MC", 'M', ItemList.Hull_MAX, 'C', OrePrefixes.wireGt01.get(Materials.SuperconductorUHV)});
 
         ItemList.Hatch_Energy_ULV.set(new GT_MetaTileEntity_Hatch_Energy(40, "hatch.energy.tier.00", "ULV Energy Hatch", 0).getStackForm(1L));
         ItemList.Hatch_Energy_LV.set(new GT_MetaTileEntity_Hatch_Energy(41, "hatch.energy.tier.01", "LV Energy Hatch", 1).getStackForm(1L));
@@ -232,9 +232,9 @@ public class GT_Loader_MetaTileEntities implements Runnable {//TODO CHECK CIRCUI
         ItemList.Hatch_Energy_UV.set(new GT_MetaTileEntity_Hatch_Energy(48, "hatch.energy.tier.08", "UV Energy Hatch", 8).getStackForm(1L));
         ItemList.Hatch_Energy_MAX.set(new GT_MetaTileEntity_Hatch_Energy(49, "hatch.energy.tier.09", "UHV Energy Hatch", 9).getStackForm(1L));
 
-        GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Energy_ULV.get(1L), bitsd, new Object[]{"COL", "XMP", "COL", 'M', ItemList.Hull_ULV, 'C', OrePrefixes.cableGt01.get(Materials.Lead), 'X', OrePrefixes.circuit.get(Materials.Primitive), 'O', ItemList.ULV_Coil, 'L', OrePrefixes.cell.get(Materials.Lubricant), 'P', OrePrefixes.rotor.get(Materials.Lead)});
-        GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Energy_LV.get(1L), bitsd, new Object[]{"XOL ", "CMP", "XOL", 'M', ItemList.Hull_LV, 'C', OrePrefixes.cableGt01.get(Materials.Tin), 'X', OrePrefixes.circuit.get(Materials.Basic), 'O', ItemList.LV_Coil, 'L', OrePrefixes.cell.get(Materials.Lubricant), 'P', ItemList.Pump_LV});
-        GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Energy_MV.get(1L), bitsd, new Object[]{"XOL ", "CMP", "XOL", 'M', ItemList.Hull_MV, 'C', OrePrefixes.cableGt01.get(Materials.Copper), 'X', OrePrefixes.circuit.get(Materials.Good), 'O', ItemList.MV_Coil, 'L', OrePrefixes.cell.get(Materials.Lubricant), 'P', ItemList.Pump_MV});
+        GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Energy_ULV.get(1), bitsd, new Object[]{"CM ", 'M', ItemList.Hull_ULV, 'C', OrePrefixes.cableGt01.get(Materials.Lead)});
+        GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Energy_LV.get(1), bitsd, new Object[]{"CM ", 'M', ItemList.Hull_LV, 'C', OrePrefixes.cableGt01.get(Materials.Tin)});
+        GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Energy_MV.get(1), bitsd, new Object[]{"CM ", 'M', ItemList.Hull_MV, 'C', OrePrefixes.cableGt01.get(Materials.Copper)});
         GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Energy_HV.get(1), bitsd, new Object[]{"CM ", 'M', ItemList.Hull_HV, 'C', OrePrefixes.cableGt01.get(Materials.Gold)});
         GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Energy_EV.get(1L), bitsd, new Object[]{"CM ", 'M', ItemList.Hull_EV, 'C', OrePrefixes.cableGt01.get(Materials.Aluminium)});
         GT_ModHandler.addCraftingRecipe(ItemList.Hatch_Energy_IV.get(1L), bitsd, new Object[]{"CM ", 'M', ItemList.Hull_IV, 'C', OrePrefixes.cableGt01.get(Materials.Tungsten)});
