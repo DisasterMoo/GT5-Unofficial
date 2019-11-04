@@ -39,6 +39,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
 
     @Override //Really?
     public boolean addFusionReactorRecipe(FluidStack aInput1, FluidStack aInput2, FluidStack aOutput1, int aDuration, int aEUt, int aStartEU) {
+        aDuration = aDuration / 4 + 1;
         if (aInput1 == null || aInput2 == null || aOutput1 == null || aDuration < 1 || aEUt < 1 || aStartEU < 1) {
             return false;
         }
@@ -62,6 +63,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addCentrifugeRecipe(ItemStack aInput1, ItemStack aInput2, FluidStack aFluidInput, FluidStack aFluidOutput, ItemStack aOutput1, ItemStack aOutput2, ItemStack aOutput3, ItemStack aOutput4, ItemStack aOutput5, ItemStack aOutput6, int[] aChances, int aDuration, int aEUt, boolean aCleanroom) {
+        aDuration = aDuration / 4 + 1;
         if (((aInput1 == null) && (aFluidInput == null)) || ((aOutput1 == null) && (aFluidOutput == null))) {
             return false;
         }
@@ -79,6 +81,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addCompressorRecipe(ItemStack aInput1, ItemStack aOutput1, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput1 == null) || (aOutput1 == null)) {
             return false;
         }
@@ -94,6 +97,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addElectrolyzerRecipe(ItemStack aInput1, ItemStack aInput2, FluidStack aFluidInput, FluidStack aFluidOutput, ItemStack aOutput1, ItemStack aOutput2, ItemStack aOutput3, ItemStack aOutput4, ItemStack aOutput5, ItemStack aOutput6, int[] aChances, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if (((aInput1 == null) && (aFluidInput == null)) || ((aOutput1 == null) && (aFluidOutput == null))) {
             return false;
         }
@@ -130,6 +134,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
         return addChemicalRecipe(aInput1, aInput2, aFluidInput, aFluidOutput, aOutput, aOutput2, aDuration, aEUtick, false);
     }
     public boolean addChemicalRecipe(ItemStack aInput1, ItemStack aInput2, FluidStack aFluidInput, FluidStack aFluidOutput, ItemStack aOutput, ItemStack aOutput2, int aDuration, int aEUtick, boolean aCleanroom) {
+        aDuration = aDuration / 4 + 1;
         if (((aInput1 == null) && (aFluidInput == null)) || ((aOutput == null) && (aOutput2 == null) && (aFluidOutput == null))) {
             return false;
         }
@@ -154,6 +159,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addMultiblockChemicalRecipe(ItemStack[] aInputs, FluidStack[] aFluidInputs, FluidStack[] aFluidOutputs, ItemStack[] aOutputs, int aDuration, int aEUtick){
+        aDuration = aDuration / 4 + 1;
         if (areItemsAndFluidsBothNull(aInputs, aFluidInputs) || areItemsAndFluidsBothNull(aOutputs, aFluidOutputs)) {
             return false;
         }
@@ -165,6 +171,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addChemicalRecipeForBasicMachineOnly(ItemStack aInput1, ItemStack aInput2, FluidStack aFluidInput, FluidStack aFluidOutput, ItemStack aOutput, ItemStack aOutput2, int aDuration, int aEUtick) {
+        aDuration = aDuration / 4 + 1;
         if (((aInput1 == null) && (aFluidInput == null)) || ((aOutput == null) && (aOutput2 == null) && (aFluidOutput == null))) {
             return false;
         }
@@ -202,6 +209,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addBlastRecipe(ItemStack aInput1, ItemStack aInput2, FluidStack aFluidInput, FluidStack aFluidOutput, ItemStack aOutput1, ItemStack aOutput2, int aDuration, int aEUt, int aLevel) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput1 == null) || (aOutput1 == null)) {
             return false;
         }
@@ -214,6 +222,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addPrimitiveBlastRecipe(ItemStack aInput1, ItemStack aInput2, int aCoalAmount, ItemStack aOutput1, ItemStack aOutput2, int aDuration) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput1 == null && aInput2 == null) || (aOutput1 == null && aOutput2 == null)) {
             return false;
         }
@@ -249,6 +258,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addCannerRecipe(ItemStack aInput1, ItemStack aInput2, ItemStack aOutput1, ItemStack aOutput2, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput1 == null) || (aOutput1 == null)) {
             return false;
         }
@@ -265,6 +275,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addAlloySmelterRecipe(ItemStack aInput1, ItemStack aInput2, ItemStack aOutput1, int aDuration, int aEUt, boolean hidden) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput1 == null) || (aOutput1 == null || Materials.Graphite.contains(aInput1))) {
             return false;
         }
@@ -283,6 +294,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
 
     @Deprecated
     public boolean addCNCRecipe(ItemStack aInput1, ItemStack aOutput1, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput1 == null) || (aOutput1 == null)) {
             return false;
         }
@@ -293,6 +305,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addLatheRecipe(ItemStack aInput1, ItemStack aOutput1, ItemStack aOutput2, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput1 == null) || (aOutput1 == null)) {
             return false;
         }
@@ -304,6 +317,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
     @Override
     public boolean addCutterRecipe(ItemStack aInput, FluidStack aLubricant, ItemStack aOutput1, ItemStack aOutput2, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aLubricant == null) || (aOutput1 == null)) {
             return false;
         }
@@ -341,6 +355,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addCutterRecipe(ItemStack[] aInputs, ItemStack[] aOutputs, int aDuration, int aEUt, int aSpecial) {
+        aDuration = aDuration / 4 + 1;
         if ((aInputs == null) || (aOutputs == null) || aInputs.length == 0 || aOutputs.length == 0) {
             return false;
         }
@@ -358,6 +373,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
 
 
     public boolean addAssemblerRecipe(ItemStack aInput1, Object aOreDict,int aAmount, FluidStack aFluidInput, ItemStack aOutput1, int aDuration, int aEUt){
+        aDuration = aDuration / 4 + 1;
         for(ItemStack tStack : GT_OreDictUnificator.getOres(aOreDict)){
             if(GT_Utility.isStackValid(tStack))
                 addAssemblerRecipe(aInput1, GT_Utility.copyAmount(aAmount, tStack), aFluidInput, aOutput1, aDuration, aEUt);
@@ -366,6 +382,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addAssemblerRecipe(ItemStack[] aInputs, Object aOreDict, int aAmount, FluidStack aFluidInput, ItemStack aOutput1, int aDuration, int aEUt){
+        aDuration = aDuration / 4 + 1;
         for(ItemStack tStack : GT_OreDictUnificator.getOres(aOreDict)){
             if(GT_Utility.isStackValid(tStack)) {
                 ItemStack[] extendedInputs = new ItemStack[aInputs.length + 1];
@@ -416,7 +433,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addAssemblerRecipe(ItemStack[] aInputs, FluidStack aFluidInput, ItemStack aOutput1, int aDuration, int aEUt, boolean aCleanroom) {
-
+        aDuration = aDuration / 4 + 1;
         if (areItemsAndFluidsBothNull(aInputs, new FluidStack[]{aFluidInput})) {
             return false;
         }
@@ -469,6 +486,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addAssemblerRecipeNonOD(ItemStack[] aInputs, FluidStack aFluidInput, ItemStack aOutput1, int aDuration, int aEUt, boolean aCleanroom) {
+        aDuration = aDuration / 4 + 1;
         if (areItemsAndFluidsBothNull(aInputs, new FluidStack[]{aFluidInput})) {
             return false;
         }
@@ -490,7 +508,8 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
 
-        public boolean addWiremillRecipe(ItemStack aInput, ItemStack aOutput, int aDuration, int aEUt) {
+    public boolean addWiremillRecipe(ItemStack aInput, ItemStack aOutput, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aOutput == null)) {
             return false;
         }
@@ -502,6 +521,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addPolarizerRecipe(ItemStack aInput, ItemStack aOutput, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aOutput == null)) {
             return false;
         }
@@ -513,6 +533,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addBenderRecipe(ItemStack aInput1, ItemStack aOutput1, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput1 == null) || (aOutput1 == null)) {
             return false;
         }
@@ -524,6 +545,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addExtruderRecipe(ItemStack aInput, ItemStack aShape, ItemStack aOutput, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aShape == null) || (aOutput == null)) {
             return false;
         }
@@ -535,6 +557,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addSlicerRecipe(ItemStack aInput, ItemStack aShape, ItemStack aOutput, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aShape == null) || (aOutput == null)) {
             return false;
         }
@@ -546,6 +569,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addOreWasherRecipe(ItemStack aInput, ItemStack aOutput1, ItemStack aOutput2, ItemStack aOutput3, FluidStack aFluidInput, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aFluidInput == null) || ((aOutput1 == null) || (aOutput2 == null) || (aOutput3 == null))) {
             return false;
         }
@@ -605,6 +629,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addDistillationTowerRecipe(FluidStack aInput, FluidStack[] aOutputs, ItemStack aOutput2, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if (aInput == null || aOutputs == null || aOutputs.length < 1 || aOutputs.length > 11) {
             return false;
         }
@@ -616,6 +641,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addVacuumFreezerRecipe(ItemStack aInput1, ItemStack aOutput1, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput1 == null) || (aOutput1 == null)) {
             return false;
         }
@@ -627,6 +653,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addVacuumFreezerRecipe(ItemStack aInput1, ItemStack aOutput1, int aDuration) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput1 == null) || (aOutput1 == null)) {
             return false;
         }
@@ -665,6 +692,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addForgeHammerRecipe(ItemStack aInput1, ItemStack aOutput1, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput1 == null) || (aOutput1 == null)) {
             return false;
         }
@@ -676,6 +704,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addBoxingRecipe(ItemStack aContainedItem, ItemStack aEmptyBox, ItemStack aFullBox, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aContainedItem == null) || (aFullBox == null)) {
             return false;
         }
@@ -687,6 +716,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addUnboxingRecipe(ItemStack aFullBox, ItemStack aContainedItem, ItemStack aEmptyBox, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aFullBox == null) || (aContainedItem == null)) {
             return false;
         }
@@ -698,6 +728,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addThermalCentrifugeRecipe(ItemStack aInput, ItemStack aOutput1, ItemStack aOutput2, ItemStack aOutput3, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aOutput1 == null)) {
             return false;
         }
@@ -709,6 +740,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addAmplifier(ItemStack aAmplifierItem, int aDuration, int aAmplifierAmountOutputted) {
+        aDuration = aDuration / 4 + 1;
         if ((aAmplifierItem == null) || (aAmplifierAmountOutputted <= 0)) {
             return false;
         }
@@ -720,6 +752,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addBrewingRecipe(ItemStack aIngredient, Fluid aInput, Fluid aOutput, int aDuration, int aEUt, boolean aHidden) {
+        aDuration = aDuration / 4 + 1;
         if ((aIngredient == null) || (aInput == null) || (aOutput == null)) {
             return false;
         }
@@ -738,6 +771,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addBrewingRecipeCustom(ItemStack aIngredient, FluidStack aInput, FluidStack aOutput, int aDuration, int aEUt, boolean aHidden) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aOutput == null)) {
             return false;
         }
@@ -752,6 +786,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addFermentingRecipe(FluidStack aInput, FluidStack aOutput, int aDuration, int aEUt, boolean aHidden) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aOutput == null)) {
             return false;
         }
@@ -770,6 +805,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addDistilleryRecipe(ItemStack aCircuit, FluidStack aInput, FluidStack aOutput, ItemStack aSolidOutput, int aDuration, int aEUt, boolean aHidden) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aOutput == null)) {
             return false;
         }
@@ -827,6 +863,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addFluidSolidifierRecipe(ItemStack aMold, FluidStack aInput, ItemStack aOutput, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aMold == null) || (aInput == null) || (aOutput == null)) {
             return false;
         }
@@ -849,6 +886,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addFluidSmelterRecipe(ItemStack aInput, ItemStack aRemains, FluidStack aOutput, int aChance, int aDuration, int aEUt, boolean hidden) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aOutput == null)) {
             return false;
         }
@@ -869,6 +907,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addFluidExtractionRecipe(ItemStack aInput, ItemStack aRemains, FluidStack aOutput, int aChance, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aOutput == null)) {
             return false;
         }
@@ -905,6 +944,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addFluidCannerRecipe(ItemStack aInput, ItemStack aOutput, FluidStack aFluidInput, FluidStack aFluidOutput, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput != null) && (aOutput != null)) {
             if ((aFluidInput == null ? 1 : 0) != (aFluidOutput == null ? 1 : 0)) {
             }
@@ -922,6 +962,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addChemicalBathRecipe(ItemStack aInput, FluidStack aBathingFluid, ItemStack aOutput1, ItemStack aOutput2, ItemStack aOutput3, int[] aChances, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aBathingFluid == null) || (aOutput1 == null)) {
             return false;
         }
@@ -933,6 +974,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addElectromagneticSeparatorRecipe(ItemStack aInput, ItemStack aOutput1, ItemStack aOutput2, ItemStack aOutput3, int[] aChances, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aOutput1 == null)) {
             return false;
         }
@@ -944,6 +986,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addExtractorRecipe(ItemStack aInput, ItemStack aOutput, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aOutput == null)) {
             return false;
         }
@@ -955,6 +998,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addPrinterRecipe(ItemStack aInput, FluidStack aFluid, ItemStack aSpecialSlot, ItemStack aOutput, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aFluid == null) || (aOutput == null)) {
             return false;
         }
@@ -970,6 +1014,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addAutoclaveSpaceRecipe(ItemStack aInput, FluidStack aFluid, ItemStack aOutput, int aChance, int aDuration, int aEUt, boolean aCleanroom) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aFluid == null) || (aOutput == null)) {
             return false;
         }
@@ -983,6 +1028,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
         return true;
     }
     public boolean addAutoclaveRecipe(ItemStack aInput, FluidStack aFluid, ItemStack aOutput, int aChance, int aDuration, int aEUt, boolean aCleanroom) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aFluid == null) || (aOutput == null)) {
             return false;
         }
@@ -1002,6 +1048,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
 
     }
     public boolean addMixerRecipe(ItemStack aInput1, ItemStack aInput2, ItemStack aInput3, ItemStack aInput4, ItemStack aInput5, ItemStack aInput6, FluidStack aFluidInput, FluidStack aFluidOutput, ItemStack aOutput, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if (((aInput1 == null) && (aFluidInput == null)) || ((aOutput == null) && (aFluidOutput == null))) {
             return false;
         }
@@ -1020,6 +1067,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addLaserEngraverRecipe(ItemStack aItemToEngrave, ItemStack aLens, ItemStack aEngravedItem, int aDuration, int aEUt, boolean aCleanroom) {
+        aDuration = aDuration / 4 + 1;
         if ((aItemToEngrave == null) || (aLens == null) || (aEngravedItem == null)) {
             return false;
         }
@@ -1034,6 +1082,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addFormingPressRecipe(ItemStack aItemToImprint, ItemStack aForm, ItemStack aImprintedItem, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aItemToImprint == null) || (aForm == null) || (aImprintedItem == null)) {
             return false;
         }
@@ -1045,6 +1094,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addFluidHeaterRecipe(ItemStack aCircuit, FluidStack aInput, FluidStack aOutput, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aOutput == null)) {
             return false;
         }
@@ -1056,6 +1106,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addSifterRecipe(ItemStack aItemToSift, ItemStack[] aSiftedItems, int[] aChances, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aItemToSift == null) || (aSiftedItems == null)) {
             return false;
         }
@@ -1077,6 +1128,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addArcFurnaceRecipe(ItemStack aInput, ItemStack[] aOutputs, int[] aChances, int aDuration, int aEUt,	boolean hidden) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aOutputs == null)) {
             return false;
         }
@@ -1105,6 +1157,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addSimpleArcFurnaceRecipe(ItemStack aInput, FluidStack aFluidInput, ItemStack[] aOutputs, int[] aChances, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aOutputs == null) || aFluidInput == null) {
             return false;
         }
@@ -1121,6 +1174,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addPlasmaArcFurnaceRecipe(ItemStack aInput, FluidStack aFluidInput, ItemStack[] aOutputs, int[] aChances, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aOutputs == null) || aFluidInput == null) {
             return false;
         }
@@ -1137,6 +1191,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addPlasmaArcFurnaceRecipe(ItemStack aInput, FluidStack aFluidInput, ItemStack[] aOutputs, FluidStack aFluidOutput, int[] aChances, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aOutputs == null) || aFluidInput == null) {
             return false;
         }
@@ -1158,6 +1213,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addPulveriserRecipe(ItemStack aInput, ItemStack[] aOutputs, int[] aChances, int aDuration, int aEUt, boolean hidden) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null) || (aOutputs == null)) {
             return false;
         }
@@ -1178,6 +1234,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
 
     @Override
     public boolean addPyrolyseRecipe(ItemStack aInput, FluidStack aFluidInput, int intCircuit, ItemStack aOutput, FluidStack aFluidOutput, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if (aInput == null) {
             return false;
         }
@@ -1206,6 +1263,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
 
     @Override
     public boolean addCrackingRecipe(int circuitConfig, FluidStack aInput, FluidStack aInput2, FluidStack aOutput, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aInput == null && aInput2 == null) || (aOutput == null)) {
             return false;
         }
@@ -1219,6 +1277,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
 
     @Override
     public boolean addAssemblylineRecipe(ItemStack aResearchItem, int aResearchTime, ItemStack[] aInputs, FluidStack[] aFluidInputs, ItemStack aOutput, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aResearchItem==null)||(aResearchTime<=0)||(aInputs == null) || (aOutput == null) || aInputs.length>15 || aInputs.length<4) {
             return false;
         }
@@ -1238,6 +1297,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
 
     @Override
 	public boolean addAssemblylineRecipe(ItemStack aResearchItem, int aResearchTime, Object[] aInputs, FluidStack[] aFluidInputs, ItemStack aOutput, int aDuration, int aEUt) {
+        aDuration = aDuration / 4 + 1;
         if ((aResearchItem==null)||(aResearchTime<=0)||(aInputs == null) || (aOutput == null) || aInputs.length>15 || aInputs.length<4) {
             return false;
         }
@@ -1293,7 +1353,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
 
     public boolean addCircuitAssemblerRecipe(ItemStack[] aInputs, FluidStack aFluidInput, ItemStack aOutput, int aDuration, int aEUt, boolean aCleanroom) {
-
+        aDuration = aDuration / 4 + 1;
         if (this.areItemsAndFluidsBothNull(aInputs, new FluidStack[]{aFluidInput})) {
             return false;
         }
@@ -1342,6 +1402,7 @@ public class GT_RecipeAdder implements IGT_RecipeAdder {
     }
     
     public boolean addCircuitAssemblerRecipeNonOredicted(ItemStack[] aInputs, FluidStack aFluidInput, ItemStack aOutput, int aDuration, int aEUt, boolean aCleanroom) {
+        aDuration = aDuration / 4 + 1;
         if ((aInputs == null) || (aOutput == null) || aInputs.length>6 || aInputs.length<1) {
             return false;
         }
